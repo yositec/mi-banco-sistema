@@ -1,0 +1,9 @@
+spring:
+  r2dbc:
+    # Usamos una base de datos en memoria para que el CI pase rápido
+    url: r2dbc:h2:mem:///testdb
+    username: sa
+    password:
+  sql:
+    init:
+      mode: never # No necesitamos inicializar nada en la memoria

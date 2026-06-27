@@ -26,3 +26,5 @@ jobs:
 
       - name: Build with Gradle
         run: ./gradlew build
+        env:
+          SPRING_PROFILES_ACTIVE: test
