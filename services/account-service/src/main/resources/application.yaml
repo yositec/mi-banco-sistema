@@ -1,3 +1,11 @@
 spring:
   application:
     name: sistema
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/banco_db
+    username: admin
+    password: secretpassword
+
+  sql:
+    init:
+      mode: always

@@ -32,6 +32,9 @@ dependencies {
 	testCompileOnly("org.projectlombok:lombok")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 	testAnnotationProcessor("org.projectlombok:lombok")
+	testImplementation("org.testcontainers:postgresql:1.19.0")
+	testImplementation("org.testcontainers:junit-jupiter:1.19.0")
+	testImplementation("org.testcontainers:r2dbc:1.19.0")
 }
 
 tasks.withType<Test> {
