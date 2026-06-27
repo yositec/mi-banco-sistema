@@ -1,4 +1,8 @@
 spring:
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.r2dbc.R2dbcAutoConfiguration
+  main:
+    banner-mode: "off"
   r2dbc:
     # Usamos una base de datos en memoria para que el CI pase rápido
     url: r2dbc:h2:mem:///testdb
