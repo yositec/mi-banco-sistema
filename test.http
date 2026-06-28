@@ -1,0 +1,11 @@
+    ### Crear una nueva cuenta
+POST http://localhost:8080/api/v1/accounts
+Content-Type: application/json
+
+{
+  "accountNumber": "123456789",
+  "balance": 1000.00
+}
+
+### Consultar cuentas
+GET http://localhost:8080/api/v1/accounts

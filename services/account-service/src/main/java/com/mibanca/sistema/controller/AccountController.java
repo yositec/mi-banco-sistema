@@ -19,6 +19,11 @@ public class AccountController {
         return repository.findAll();
     }
 
+    @PostMapping
+    public Mono<Account> createAccount(@RequestBody Account account) {
+        return repository.save(account);
+    }
+
     @GetMapping("/{accountNumber}")
     public Mono<Account> getAccount(@PathVariable String accountNumber) {
         return repository.findByAccountNumber(accountNumber);
