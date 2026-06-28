@@ -4,7 +4,7 @@ import '../data/models/account.dart';
 
 class AccountService {
   // 10.0.2.2 es el alias del localhost de tu PC para el emulador Android
-  final Dio _dio = Dio(BaseOptions(baseUrl: 'http://localhost:8080/api/v1'));
+  final Dio _dio = Dio(BaseOptions(baseUrl: 'http://10.0.2.2:8080/api/v1'));
 
   Future<List<Account>> getAccounts() async {
     final response = await _dio.get('/accounts');

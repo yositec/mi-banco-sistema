@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import '../../domain/models/account_model.dart'; // Asegúrate de tener tu modelo aquí
+import '../models/account.dart'; // Asegúrate de tener tu modelo aquí
 
 class AccountRepository {
   final Dio _dio = Dio(BaseOptions(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile/features/account/presentation/widgets/balance_card.dart';
 import '../data/models/account.dart';
 import '../services/account_service.dart';
 
@@ -41,9 +42,9 @@ class _AccountTestScreenState extends State<AccountTestScreen> {
           : ListView.builder(
               itemCount: _accounts.length,
               itemBuilder: (context, index) {
-                return ListTile(
-                  title: Text("Cuenta: ${_accounts[index].accountNumber}"),
-                  subtitle: Text("Saldo: \$${_accounts[index].balance}"),
+                return BalanceCard(
+                  balance: _accounts[index].balance,
+                  accountNumber: _accounts[index].accountNumber,
                 );
               },
             ),
